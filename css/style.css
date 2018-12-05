@@ -1,0 +1,101 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "PT Sans", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+html {
+	padding-right: 40px;
+	padding-left: 40px;
+	background-color: #f2f2f2;
+}
+
+body {
+	color: #333333;
+	background-color: #ffffff;
+	box-shadow: 0 0 15px -2px rgba(0, 0, 0, 0.4);
+}
+
+.visibility-hidden {
+	display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  clip-path: inset(50%); 
+  margin: -1px;
+}
+
+																						/* MAIN-HEADER */
+
+.main-header {
+	background-color: #ffffff;
+}
+
+.main-navigation-items {
+	display: flex;
+	flex-direction: row;
+  list-style: none;
+  min-height: 56px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navigation-item {
+	display: flex;
+	flex-direction: row;
+	flex-basis: 245px;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.main-navigation-link {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.main-navigation-link:hover {
+	color: #81b3d2;
+}
+
+.main-navigation-link:active {
+	opacity: 0.3;
+}
+
+.logo-item {
+	position: relative;
+	align-self: flex-start;
+}
+
+.main-logo {
+	position: absolute;
+	top: 0;
+}
+
+.header-photo {
+	display: block;
+	width: 100%;
+}
