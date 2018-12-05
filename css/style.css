@@ -27,17 +27,18 @@ body {
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
-  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
   width: 1px;
   height: 1px;
   overflow: hidden;
   border: 0;
   padding: 0;
-  /* Устаревшее свойство clip для старых браузеров */
   clip: rect(0 0 0 0);
-  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
   clip-path: inset(50%); 
   margin: -1px;
+}
+
+.active-link {
+	color: #766357;
 }
 
 																						/* MAIN-HEADER */
@@ -77,11 +78,11 @@ body {
 	color: #000000;
 }
 
-.main-navigation-link:hover {
+.main-navigation-link:not(.active-link):hover {
 	color: #81b3d2;
 }
 
-.main-navigation-link:active {
+.main-navigation-link:not(.active-link):active {
 	opacity: 0.3;
 }
 
