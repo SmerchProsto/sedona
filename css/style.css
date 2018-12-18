@@ -5,26 +5,24 @@
 }
 
 .main-navigation-items {
-	display: flex;
-	flex-direction: row;
-  list-style: none;
-  min-height: 56px;
-  margin: 0;
-  padding: 0;
+  	display: flex;
+  	flex-direction: row;
+  	list-style: none;
+  	min-height: 56px;
+  	margin: 0;
+  	padding: 0;
 }
 
 .main-navigation-item {
-	display: flex;
-	flex-direction: row;
-	flex-basis: 245px;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-	margin: 0;
-	padding: 0;
+  	display: flex;
+  	flex-direction: row;
+  	flex-basis: 245px;
+  	flex-grow: 1;
+  	justify-content: center;
+  	align-items: center;
+		margin: 0;
+		padding: 0;
 }
-
-
 
 .main-navigation-link {
 	display: inline-block;
