@@ -60,7 +60,7 @@
 
 																						/* MAIN */
 
-main {
+main:not(.sedona-hotels) {
 	display: grid;
 	grid-template-columns: repeat(3, 400px);
 	grid-template-rows: repeat(5, auto)/* 200px 255px 335px 258px 258px */;
