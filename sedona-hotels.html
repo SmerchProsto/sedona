@@ -21,23 +21,29 @@
 		<h1 class="visibility-hidden">Отели Седоны</h1>
 	</header>
 	<main class="sedona-hotels">
-			<form class="form-filter-hotels" action="#" method="post">
+			<form class="form-filter-hotels" action="#" method="get">
 				<h2 class="visibility-hidden">Форма поиска</h2>
 				<ul class="form-items">
 					<li class="form-item">
 						<h3 class="form-item-title">Инфраструктура</h3>
 						<ul class="service-items">
 							<li class="service-item">
-								<input class="service-item-checkbox" id="pool" type="checkbox">
-								<label for="pool">Бассейн</label>
+								<input class="service-item-checkbox visually-hidden" id="pool" type="checkbox" checked>
+								<div class="icon-checkbox-off"></div>
+								<img class="icon-checkbox-on" src="img/icon-checkbox-on.png" alt="">
+								<label class="service-item-label" for="pool">Бассейн</label>
 							</li>
 							<li class="service-item">
-								<input class="service-item-checkbox" id="parking" type="checkbox">
-								<label for="parking">Парковка</label>
+								<input class="service-item-checkbox visually-hidden" id="parking" type="checkbox">
+								<div class="icon-checkbox-off"></div>
+								<img class="icon-checkbox-on" src="img/icon-checkbox-on.png" alt="">
+								<label class="service-item-label" for="parking">Парковка</label>
 							</li>
 							<li class="service-item">
-								<input class="service-item-checkbox" id="wifi" type="checkbox">
-								<label for="wifi">Wi-Fi</label>
+								<input class="service-item-checkbox visually-hidden" id="wifi" type="checkbox">
+								<div class="icon-checkbox-off"></div>
+								<img class="icon-checkbox-on" src="img/icon-checkbox-on.png" alt="">
+								<label class="service-item-label" for="wifi">Wi-Fi</label>
 							</li>
 						</ul>
 					</li>
@@ -45,34 +51,40 @@
 						<h3 class="form-item-title">Тип Жилья:</h3>
 						<ul class="service-items">
 							<li class="service-item">
-								<input class="service-item-checkbox" id="hotel" type="checkbox">
-								<label for="hotel">Гостиница</label>
+								<input class="service-item-checkbox visually-hidden" id="hotel" type="checkbox" checked>
+								<div class="icon-checkbox-off"></div>
+								<img class="icon-checkbox-on" src="img/icon-checkbox-on.png" alt="">
+								<label class="service-item-label" for="hotel">Гостиница</label>
 							</li>
 							<li class="service-item">
-								<input class="service-item-checkbox" id="motel" type="checkbox">
-								<label for="motel">Мотель</label>
+								<input class="service-item-checkbox visually-hidden" id="motel" type="checkbox" checked>
+								<div class="icon-checkbox-off"></div>
+								<img class="icon-checkbox-on" src="img/icon-checkbox-on.png" alt="">
+								<label class="service-item-label" for="motel">Мотель</label>
 							</li>
 							<li class="service-item">
-								<input class="service-item-checkbox" id="apartments" type="checkbox">
-								<label for="apartments">Апартаменты</label>
+								<input class="service-item-checkbox visually-hidden" id="apartments" type="checkbox" checked>
+								<div class="icon-checkbox-off"></div>
+								<img class="icon-checkbox-on" src="img/icon-checkbox-on.png" alt="">
+								<label class="service-item-label" for="apartments">Апартаменты</label>
 							</li>
 						</ul>
 					</li>
 					<li class="form-item price-item">
 						<h3 class="form-item-title">Cтоимость в сутки (р):</h3>
-						<ul class="service-items">
-							<li class="service-item">
-								<input class="service-item-input" type="text" placeholder="От 0">
-								<input class="service-item-input" type="text" placeholder="До 3000">
+						<ul class="consumption-items">
+							<li class="consumption-item consumption-input-items">
+								<input class="consumption-input-item input-first-price" type="text" placeholder="От 0">
+								<input class="consumption-input-item input-second-price" type="text" placeholder="До 3000">
+								<span class="separatory-line"></span>
 							</li>
-							<li class="service-item">
-								<div class="service-slide">
-									<div class="service-scale">
-										<div class="service-range"></div>
-										<div class="service-range"></div>
-										<div class="service-scale-filled"></div>
-									</div>
-								</div>
+							<li class="consumption-item consumption-slide">
+								<div class="consumption-scale"></div>
+								<div class="consumption-range consumption-first-range"></div>
+								<div class="consumption-range consumption-second-range"></div>
+								<div class="consumption-scale-filled"></div>
+							</li>
+							<li class="consumption-item">
 								<input class="form-button" type="button" value="ПОКАЗАТЬ">
 							</li>
 						</ul>
@@ -83,11 +95,9 @@
 				<h2 class="result-title">Найдено: <span class="result-number">3</span></h2>
 				<h3 class="result-sorting-title">Сортировка:</h3>
 				<ul class="result-sorting-items">
-					<li class="result-sorting-item">
-						<a href="#">По цене</a>
-						<a href="#">По типу</a>
-						<a href="#">По рейтингу</a>
-					</li>
+					<li class="result-sorting-item"><a class="result-sorting-link" href="#">По цене</a></li>
+					<li class="result-sorting-item"><a class="result-sorting-link" href="#">По типу</a></li>
+					<li class="result-sorting-item"><a class="result-sorting-link" href="#">По рейтингу</a></li>
 				</ul>
 				<div class="result-sorting-button sorting-button-up"></div>
 				<div class="result-sorting-button sorting-button-down"></div>
@@ -104,9 +114,9 @@
 								<li class="residence-data-item location-data">Гостиница</li>
 								<li class="residence-data-item price-data">от 4000 р.</li>
 							</ul>
-							<ul class="residence-button-items">
-								<li class="residence-button-item"><a class="residence-button button-more-information" href="#">Подробнее</a></li>
-								<li class="residence-button-item"><a class="residence-button button-booking" href="#">Забронировать</a></li>
+							<ul class="residence-items-button">
+								<li class="residence-item-button"><a class="button-more-information" href="#"><span class="button-active-link">Подробнее</span></a></li>
+								<li class="residence-item-button"><a class="button-booking" href="#"><span class="button-active-link">Забронировать</span></a></li>
 							</ul>
 						</section>
 					</section>
@@ -133,9 +143,9 @@
 								<li class="residence-data-item location-data">Мотель</li>
 								<li class="residence-data-item price-data">от 3000 р.</li>
 							</ul>
-							<ul class="residence-button-items">
-								<li class="residence-button-item"><a class="residence-button button-more-information" href="#">Подробнее</a></li>
-								<li class="residence-button-item"><a class="residence-button button-booking" href="#">Забронировать</a></li>
+							<ul class="residence-items-button">
+								<li class="residence-item-button"><a class="button-more-information" href="#"><span class="button-active-link">Подробнее</span></a></li>
+								<li class="residence-item-button"><a class="button-booking" href="#"><span class="button-active-link">Забронировать</span></a></li>
 							</ul>
 						</section>
 					</section>
@@ -161,9 +171,9 @@
 								<li class="residence-data-item location-data">Апартаменты</li>
 								<li class="residence-data-item price-data">от 2000 р.</li>
 							</ul>
-							<ul class="residence-button-items">
-								<li class="residence-button-item"><a class="residence-button button-more-information" href="#">Подробнее</a></li>
-								<li class="residence-button-item"><a class="residence-button button-booking" href="#">Забронировать</a></li>
+							<ul class="residence-items-button">
+								<li class="residence-item-button"><a class="button-more-information" href="#"><span class="button-active-link">Подробнее</span></a></li>
+								<li class="residence-item-button"><a class="button-booking" href="#"><span class="button-active-link">Забронировать</span></a></li>
 							</ul>
 						</section>
 					</section>
