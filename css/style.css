@@ -39,7 +39,7 @@
 	color: #81b3d2;
 }
 
-.main-navigation-link:not(.active-link):active {
+.main-navigation-link:not(.main-logo):active {
 	opacity: 0.3;
 }
 
@@ -112,7 +112,51 @@ main:not(.sedona-hotels) {
 	padding: 0;
 }
 
+.service-item {
+	position: relative;
+	padding-left: 40px;
+	margin-bottom: 22px;
+}
+
+.service-item:last-child,
+.consumption-item:last-child {
+	margin-bottom: 0;
+}
+
+.icon-checkbox-off {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 19px;
+	height: 19px;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+
+.icon-checkbox-on {
+	display: none;
+}
+
+.service-item-checkbox:checked ~ .icon-checkbox-on {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+.service-item-checkbox:checked ~ .icon-checkbox-off {
+	display: none;
+}
+
+.service-item-checkbox:disabled ~ .icon-checkbox-off,
+.service-item-checkbox:disabled ~ .icon-checkbox-on,
+.service-item-checkbox:disabled ~ .service-item-label {
+	opacity: 0.4;
+}
+
 .price-item {
+	min-width: 330px;
+	padding-left: 10px;
 	justify-self: end;
 }
 
@@ -120,10 +164,123 @@ main:not(.sedona-hotels) {
 	color: #ffffff;
 }
 
+.consumption-items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.consumption-item {
+	margin: 0;
+	margin-bottom: 11px;
+	padding: 0;
+}
+
+.consumption-input-items {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+
+.consumption-input-item {
+	height: 34px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+}
+
+.separatory-line {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	right: 50%;
+	width: 2px;
+	height: 22px;
+	background-color: #ffffff;
+}
+
+.input-first-price {
+	border-right: none;
+}
+
+.input-second-price {
+	border-left: none;
+}
+
+.consumption-slide {
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 32px;
+	padding-left: 12px;
+}
+
+.consumption-scale {
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background-color: #ffffff;
+	opacity: 0.3;
+}
+
+.consumption-scale-filled {
+	position: absolute;
+	top: 0px;
+	width: 75%;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.consumption-range {
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	background-color: #b4b4b4;
+	border: 10px solid #ffffff;
+	border-radius: 50%;
+	transform: translate(0%, -50%);
+}
+
+.consumption-first-range {
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.consumption-second-range {
+	top: 0;
+	left: 75%;
+	z-index: 100;
+}
+
+.form-button {
+	display: block;
+	width: 133px;
+	height: 33px;
+	margin: 0 auto;
+	color: #ffffff;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	cursor: pointer;
+}
+
+.form-button:hover {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+
 .result-form {
 	display: flex;
 	flex-direction: row;
-	padding-top: 15px;
+	align-items: center;
+	min-height: 90px;
 	padding-right: 73px;
 	padding-left: 73px;
 }
@@ -134,14 +291,49 @@ main:not(.sedona-hotels) {
 }
 
 .result-sorting-title {
-	margin-top: 0;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
 	margin-right: 40px;
 }
 
 .result-sorting-items {
+	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
+	min-width: 240px;
+	max-width: 740px;
 	margin: 0;
 	padding: 0;
+}
+
+.result-sorting-item {
+	margin: 0;
+	margin-right: 30px;
+	padding: 0;
+}
+
+.result-sorting-item:last-child {
+	margin-right: 0;
+}
+
+.result-sorting-link {
+	font-size: 12px;
+	line-height: 18px;
+	text-decoration: none;
+	border-bottom: 2px dotted #000000;
+	opacity: 0.4;
+}
+
+.result-sorting-link:hover {
+	color: #81b3d2;
+	border-bottom: 2px dotted #81b3d2;
+	opacity: 1;
+}
+
+.result-sorting-link:active {
+	color: #000000;
+	border: none;
 }
 
 .result-items,
@@ -154,6 +346,7 @@ main:not(.sedona-hotels) {
 }
 
 .result-items {
+	margin-bottom: 35px;
 	padding-right: 73px;
 	padding-left: 73px;
 }
@@ -161,16 +354,22 @@ main:not(.sedona-hotels) {
 .result-item {
 	display: grid;
 	grid-template-columns: repeat(2, 528px);
+	border-top: 1px solid #f6f6f6;
+	border-bottom: 1px solid #f6f6f6;
 }
 
 .residence-information {
 	display: flex;
 	flex-direction: row;
 	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 .residence-content {
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	min-width: 259px;
 }
 
@@ -180,37 +379,93 @@ main:not(.sedona-hotels) {
 
 
 .name-residence {
-	margin-top: 0;
-	margin-bottom: 10px;
+	margin: 0;
 }
 
 .residence-data-items {
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 }
 
 .residence-data-item {
-	min-width: 112px;
+	box-sizing: border-box;
 	margin-right: 7px;
 }
 
-.residence-button-items {
+.residence-data-item:last-child {
+	margin-right: 0;
+}
+
+.residence-items-button {
+	list-style: none;
 	display: flex;
+	margin: 0;
+	padding: 0;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
-.residence-button-item {
-	min-width: 112px;
+.residence-item-button {
 	margin-right: 7px;
+}
+
+.residence-item-button:last-child {
+	margin-right: 0;
+}
+
+.button-more-information,
+.button-booking {
+	display: block;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.button-more-information {
+	background-color: #81b3d2;
+}
+
+.button-more-information:hover {
+	background-color: #669ec0;
+}
+
+.button-more-information:active {
+	background-color: #5496bd;
+}
+
+.button-more-information:active .button-active-link,
+.button-booking:active .button-active-link {
+	opacity: 0.3;
+}
+
+.button-booking {
+	background-color: #766357;
+}
+
+.button-booking:hover {
+	background-color: #604e43;
+}
+
+.button-booking:active {
+	background-color: #503e33;
+}
+
+.location-data {
+	min-width: 112px;
 }
 
 .residence-rating {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: flex-end;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 .rating-star-items {
@@ -482,12 +737,12 @@ main:not(.sedona-hotels) {
 
 .amount-people-input {
 	box-sizing: border-box;
-	width: 39px;
+	display: block;
+	width: 100px;
 	height: 38px;
-	padding: 10px;
+	padding: 0;
 	font-weight: bold;
 	text-align: center;
-	vertical-align: middle;
 	color: #000000;
 	background-color: #f2f2f2;
 	border: none;
@@ -587,7 +842,7 @@ h6 {
 }
 
 .active-link {
-	color: #766357;
+	opacity: 0.3;
 }
 
 .visibility-hidden {
