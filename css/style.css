@@ -672,14 +672,32 @@ main:not(.sedona-hotels) {
 }
 
 										/* SEARCH-FORM */
-
 .search-form {
+	position: fixed;
+	top: 25%;
+	right: 25%;
+	left: 25%;
+	z-index: 9999;
 	display: flex;
 	flex-direction: column;
 	width: 466px;
 	height: 258px;
 	margin: 0 auto;
 	padding: 55px;
+	background-color: #ffffff;
+}
+
+.search-form-off {
+	position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+  margin: -1px;
 }
 
 .search-form-items {
@@ -706,8 +724,8 @@ main:not(.sedona-hotels) {
 }
 
 .search-form-input {
-	flex-basis: 350px;
 	box-sizing: border-box;
+	flex-basis: 350px;
 	height: 38px;
 	padding: 10px 30px 10px 10px;
 	font-weight: bold;
@@ -741,14 +759,12 @@ main:not(.sedona-hotels) {
 }
 
 .amount-people-input {
-	box-sizing: border-box;
-	display: block;
-	width: 100px;
-	height: 38px;
-	padding: 0;
+	width: 33px;
+	height: 37px;
+	padding-right: 2px;
+	padding-left: 2px;
 	font-weight: bold;
 	text-align: center;
-	color: #000000;
 	background-color: #f2f2f2;
 	border: none;
 }
@@ -769,13 +785,26 @@ main:not(.sedona-hotels) {
 
 .plus,
 .minus {
-	width: 40px;
-	height: 38px;
 	box-sizing: border-box;
+	width: 37px;
+	height: 39px;
 	font-size: 21px;
-	line-height: 26px;
+	line-height: 38px;
+	text-align: center;
 	color: #a9a9a9;
 	background-color: #f2f2f2;
+	border: none;
+}
+
+.plus:hover,
+.minus:hover {
+	color: #000000;
+	background-color: #ebebeb;
+}
+
+.plus:active,
+.minus:active {
+	color: #abcce1;
 }
 
 .amount-people-input:hover,
@@ -785,7 +814,6 @@ main:not(.sedona-hotels) {
 
 .amount-people-input:focus,
 .search-form-input:focus {
-	padding: 10px 30px 10px 10px;
 	background-color: #ffffff;
 	outline: 2px solid #eeeeee;
 }
@@ -826,6 +854,32 @@ html {
 	display: flex;
 	min-width: 1280px;
 	background-color: #f2f2f2;
+}
+
+.overlay::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 9998;
+	background-color: #3f3e3f;
+	opacity: 0.5;
+}
+
+.overlay-off::before {
+	content: "";
+	position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+  margin: -1px;
 }
 
 body {
