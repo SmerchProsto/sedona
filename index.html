@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="overlay overlay-off" lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Седона</title>
@@ -91,7 +91,7 @@
 			</a>
 		</p>
 	</footer>
-	<form class="search-form" action="#" method="get">
+	<form class="search-form search-form-off" action="#" method="get">
 		<ul class="search-form-items">
 			<li class="search-form-item">
 				<label class="search-form-label" for="date-arrival">Дата Заезда:</label>
@@ -105,16 +105,21 @@
 				<ul class="amount-people-items">
 					<li class="amount-people-item">
 						<label class="amount-people-label" for="amount-adults">Взрослые:</label>
-						<input class="amount-people-input" id="amount-adults" type="number" value="0" min="0" max="100">
+						<button class="minus">-</button>
+						<input class="amount-people-input" id="amount-adults" type="text" value="0">
+						<button class="plus">+</button>
 					</li>
 					<li class="amount-people-item">
 						<label class="amount-people-label" for="amount-kids">Дети:</label>
-						<input class="amount-people-input" id="amount-kids" type="number" value="0" min="0" max="100">
+						<button class="minus" type="button">-</button>
+						<input class="amount-people-input" id="amount-kids" type="text" value="0">
+						<button class="plus" type="button">+</button>
 					</li>
 				</ul>
 			</li>
 		</ul>
 		<input class="search-form-button" type="button" value="Найти">
 	</form>
+	<script src="js/script.js"></script>
 </body>
 </html>
