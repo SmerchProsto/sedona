@@ -5,7 +5,7 @@
 	<title>Седона</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="css/min-style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="main-header">
@@ -105,15 +105,15 @@
 				<ul class="amount-people-items">
 					<li class="amount-people-item">
 						<label class="amount-people-label" for="amount-adults">Взрослые:</label>
-						<button class="minus">-</button>
+						<button class="minus" id="minus-number-adults" type="button">-</button>
 						<input class="amount-people-input" id="amount-adults" type="text" value="0">
-						<button class="plus">+</button>
+						<button class="plus" id="plus-number-adults" type="button">+</button>
 					</li>
 					<li class="amount-people-item">
 						<label class="amount-people-label" for="amount-kids">Дети:</label>
-						<button class="minus" type="button">-</button>
+						<button class="minus" id="minus-number-kids" type="button">-</button>
 						<input class="amount-people-input" id="amount-kids" type="text" value="0">
-						<button class="plus" type="button">+</button>
+						<button class="plus" id="plus-number-kids" type="button">+</button>
 					</li>
 				</ul>
 			</li>
