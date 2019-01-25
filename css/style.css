@@ -838,6 +838,65 @@ main:not(.sedona-hotels) {
 	background-color: #5496bd;
 }
 
+.close-form-button {
+	position: fixed;
+	top: 25%;
+	right: 25%;
+	left: 75%;
+	z-index: 9999;
+	width: 25px;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.close-button-off {
+	position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%); 
+  margin: -1px;
+}
+
+.close-form-button::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	background-color: #f2f2f2;
+	transform: rotate(-45deg);
+}
+
+.close-form-button::after {
+	content: "";
+	position: absolute;	
+	top: 50%;
+	left: 0;
+	width: 25px;
+	height: 2px;
+	background-color: #f2f2f2;
+	transform: rotate(45deg);
+}
+
+.close-form-button:hover::before,
+.close-form-button:hover::after {
+	background-color: #ffffff;
+}
+
+.close-form-button:active::before,
+.close-form-button:active::after {
+	background-color: #eeeeee;
+}
+
 																						/* DEFAULT SETTINGS */
 
 html,
