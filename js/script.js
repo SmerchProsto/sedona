@@ -16,4 +16,4 @@ closeFormButton.addEventListener("click", function () {
 	html.classList.toggle("overlay-off");
 	closeFormButton.classList.toggle("close-button-off");
 	searchForm.classList.toggle("search-form-off");
-})
+});
